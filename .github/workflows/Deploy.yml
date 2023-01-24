@@ -15,6 +15,8 @@ jobs:
       run: sed -i 's/_DATABASE_PASSWORD_/${{ secrets.DATABASE_PASSWORD }}/g' $GITHUB_WORKSPACE/config.inc.php
     - name: Replace Database Name
       run: sed -i 's/_DATABASE_NAME_/${{ secrets.DATABASE_NAME }}/g' $GITHUB_WORKSPACE/config.inc.php
+    - name: git status
+      run: git status
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.2
       with:
