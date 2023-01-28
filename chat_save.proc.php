@@ -15,6 +15,7 @@ session_start();
 /* Includo i file necessari */
 include('includes/constant_values.inc.php');
 include('config.inc.php');
+include('db_parameters.inc.php');
 include('vocabulary/' . $PARAMETERS['languages']['set'] . '.vocabulary.php');
 include('includes/functions.inc.php');
 
